@@ -15,9 +15,7 @@ const TakeOut = (props)=>{
       <Header address="石家庄" />
       <Carousel />
       <div className="gridStyle">
-      <Grid data={data} isCarousel hasLine={false}
-        // itemStyle={{backgroundColor:'red',width:40,height:80}}
-      />
+        <Grid data={data} isCarousel hasLine={false}/>
       </div>
 
     </div>
