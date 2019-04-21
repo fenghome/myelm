@@ -1,3 +1,5 @@
+import px2viewport from 'postcss-px2viewport';
+import routes from './routes.config.js';
 
 // ref: https://umijs.org/config/
 export default {
@@ -10,7 +12,7 @@ export default {
       dynamicImport: false,
       title: 'myelm',
       dll: false,
-      
+
       routes: {
         exclude: [
           /models\//,
@@ -22,4 +24,8 @@ export default {
       },
     }],
   ],
+  routes:routes,
+  extraPostCSSPlugins:[
+    px2viewport({viewportWidth: 750})
+  ]
 }
