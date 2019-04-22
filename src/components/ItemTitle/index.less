@@ -1,0 +1,22 @@
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  font-size: 28px;
+  font-weight: 700;
+  color:#000;
+}
+.title::before,.title::after{
+  content: "";
+  width:45px;
+  height:2px;
+  background:#999;
+}
+.title::before{
+  margin-right:28px;
+}
+.title::after{
+  margin-left:28px;
+}
