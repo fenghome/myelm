@@ -6,6 +6,7 @@ import styles from './index.less';
 import centerBanner from './img/centerBanner.png';
 import qualityImg from './img/quality.png';
 import ItemTitle from '../../components/ItemTitle/index.js';
+import ShopList from './ShopList';
 
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
@@ -15,7 +16,7 @@ const data = Array.from(new Array(9)).map((_val, i) => ({
 
 const TakeOut = (props)=>{
   return (
-    <div className={styles.takeout}>
+    <div className={styles.takeout} >
       <Header address="石家庄" />
       <Carousel />
       <div className="gridStyle">
@@ -23,7 +24,7 @@ const TakeOut = (props)=>{
       </div>
       <WhiteSpace size="md" />
       <WingBlank size="lg">
-        <img src={centerBanner} className={styles.bannerLarge} />
+        <img src={centerBanner} className={styles.bannerLarge} onScroll={()=>{console.log('aaaa')}}/>
         <WhiteSpace size="md" />
         <div className={styles.quality}>
           <a className={styles.item}><img src={qualityImg} /></a>
@@ -34,7 +35,7 @@ const TakeOut = (props)=>{
         <img src={centerBanner} className={styles.bannerSmall} />
         <WhiteSpace size="md" />
         <img src={centerBanner} className={styles.bannerMiddle} />
-        <ItemTitle title="推荐商家" />
+        <ShopList />
       </WingBlank>
 
 
