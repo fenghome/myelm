@@ -19,6 +19,7 @@ class BasicLayout extends React.Component {
     }
   }
 
+
   render() {
     const { selectTab } = this.state;
 
@@ -29,7 +30,7 @@ class BasicLayout extends React.Component {
       if (selectTab == 'my') return '我的';
     }
     return (
-      <div className={styles.body}>
+      <div className={styles.body} >
         <div className={styles.header}>
           <div className={styles.title}>{getTitle()}</div>
         </div>
