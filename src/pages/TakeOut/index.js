@@ -7,6 +7,11 @@ import centerBanner from './img/centerBanner.png';
 import qualityImg from './img/quality.png';
 import ItemTitle from '../../components/ItemTitle/index.js';
 import ShopList from './ShopList';
+import { Icon } from 'antd';
+
+
+// import SelectLocation from './Header/SelectLocation';
+import Title from '../../components/Title';
 
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
@@ -16,9 +21,10 @@ const data = Array.from(new Array(9)).map((_val, i) => ({
 
 const TakeOut = (props)=>{
   return (
-    <div className={styles.takeout} >
+    <div>
+      <Title>首页</Title>
       <Header address="石家庄" />
-      <Carousel />
+      {/* <div><Carousel /></div>
       <div className="gridStyle">
         <Grid data={data} isCarousel hasLine={false}/>
       </div>
@@ -36,8 +42,8 @@ const TakeOut = (props)=>{
         <WhiteSpace size="md" />
         <img src={centerBanner} className={styles.bannerMiddle} />
         <ShopList />
-      </WingBlank>
-
+      </WingBlank> */}
+      
 
 
     </div>

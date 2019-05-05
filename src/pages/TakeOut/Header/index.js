@@ -4,6 +4,7 @@ import styles from './index.less';
 import locationIco from './img/location.svg';
 import downIco from './img/down.svg';
 import searchIco from './img/search.png';
+import SelectLocation from './SelectLocation';
 
 class Header extends React.Component {
 
@@ -23,12 +24,12 @@ class Header extends React.Component {
   }
 
   onScroll() {
-    if (window.scrollY <= 55 && this.state.searchFloat) {
+    if (window.scrollY <= 48 && this.state.searchFloat) {
       this.setState({
         searchFloat: false,
       })
     }
-    if (window.scrollY > 55 && !this.state.searchFloat) {
+    if (window.scrollY > 48 && !this.state.searchFloat) {
       this.setState({
         searchFloat: true,
       })
@@ -38,27 +39,33 @@ class Header extends React.Component {
   render() {
     const { address } = this.props;
     const searchFloatCom = (
-      <div
-        className={styles.searchFloat}
-      >
+      <div className={styles.searchWrapFloat}>
+        <div
+          className={styles.search}
+        >
         <img src={searchIco} className={styles.searchIco} />
         <span className={styles.searchText}>搜索商家、商品名称</span>
       </div>
+    </div>
     )
     return (
-      <div >
-        <div className={styles.address}>
+      <div className={styles.header}>
+        {/* <div className={styles.address}>
           <img src={locationIco} className={styles.locationIco} />
           <div className={styles.locationText}>{address}</div>
           <img src={downIco} className={styles.downIco} />
         </div>
-        <div
-          className={styles.search}
-        >
-          <img src={searchIco} className={styles.searchIco} />
-          <span className={styles.searchText}>搜索商家、商品名称</span>
+        <div className={styles.searchWrap}>
+          <div
+            className={styles.search}
+          >
+            <img src={searchIco} className={styles.searchIco} />
+            <span className={styles.searchText}>搜索商家、商品名称</span>
+          </div>
         </div>
-        {this.state.searchFloat && searchFloatCom}
+
+        {this.state.searchFloat && searchFloatCom} */}
+        <SelectLocation />
       </div>
     )
   }

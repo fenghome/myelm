@@ -10,6 +10,7 @@ import orderIcoSelect from './img/orderSelect.svg';
 import myIco from './img/my.svg';
 import myIcoSelect from './img/mySelect.svg';
 import styles from './index.css';
+import Title from '../components/Title';
 
 class BasicLayout extends React.Component {
   constructor(props) {
@@ -19,21 +20,12 @@ class BasicLayout extends React.Component {
     }
   }
 
-
   render() {
     const { selectTab } = this.state;
 
-    const getTitle = () => {
-      if (selectTab == 'index') return '首页';
-      if (selectTab == 'discover') return '发现';
-      if (selectTab == 'order') return '订单';
-      if (selectTab == 'my') return '我的';
-    }
+
     return (
       <div className={styles.body} >
-        <div className={styles.header}>
-          <div className={styles.title}>{getTitle()}</div>
-        </div>
         <div>{this.props.children}</div>
         <div className={styles.tabBar}>
           <TabBar
