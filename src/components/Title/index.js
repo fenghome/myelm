@@ -7,10 +7,10 @@ const Title = (props)=>{
   return (
     <div className={styles.content}>
       <div className={styles.title}>
-        <span className={styles.back}>{back}</span>
+        <span className={styles.back} onClick={onBackClick}>{back}</span>
         <span className={styles.center}>{children}</span>
         <span className={styles.more}>{more}</span>
-      </div>     
+      </div>
     </div>
 
   )

@@ -5,13 +5,15 @@ import locationIco from './img/location.svg';
 import downIco from './img/down.svg';
 import searchIco from './img/search.png';
 import SelectLocation from './SelectLocation';
+import QueueAnim from 'rc-queue-anim';
 
 class Header extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      searchFloat: false
+      searchFloat: false,
+      showSelectLoc:false,
     }
   }
 
@@ -36,6 +38,19 @@ class Header extends React.Component {
     }
     console.log(window.scrollY);
   }
+
+  showSelectLoc = ()=>{
+    this.setState({
+      showSelectLoc:true
+    })
+  }
+
+  hideSelectLoc = ()=>{
+    this.setState({
+      showSelectLoc:false,
+    })
+  }
+
   render() {
     const { address } = this.props;
     const searchFloatCom = (
@@ -48,9 +63,10 @@ class Header extends React.Component {
       </div>
     </div>
     )
+
     return (
       <div className={styles.header}>
-        {/* <div className={styles.address}>
+        <div className={styles.address} onClick={this.showSelectLoc}>
           <img src={locationIco} className={styles.locationIco} />
           <div className={styles.locationText}>{address}</div>
           <img src={downIco} className={styles.downIco} />
@@ -64,8 +80,17 @@ class Header extends React.Component {
           </div>
         </div>
 
-        {this.state.searchFloat && searchFloatCom} */}
-        <SelectLocation />
+        {this.state.searchFloat && searchFloatCom}
+        <QueueAnim
+          animConfig={[
+            { translateX: [0, 750] },
+          ]}
+          >
+          {this.state.showSelectLoc ? <SelectLocation key='1' onBackClick={this.hideSelectLoc}/> : null}
+
+        </QueueAnim>
+
+
       </div>
     )
   }
