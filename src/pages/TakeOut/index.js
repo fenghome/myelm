@@ -8,6 +8,7 @@ import qualityImg from './img/quality.png';
 import ItemTitle from '../../components/ItemTitle/index.js';
 import ShopList from './ShopList';
 import { Icon } from 'antd';
+import SelectCity from './SelectCity';
 
 
 // import SelectLocation from './Header/SelectLocation';
@@ -22,8 +23,8 @@ const data = Array.from(new Array(9)).map((_val, i) => ({
 const TakeOut = (props)=>{
   return (
     <div>
-      <Title>首页</Title>
-      <Header address="石家庄" />
+      {/* <Title>首页</Title> */}
+      {/* <Header address="石家庄" /> */}
       {/* <div><Carousel /></div>
       <div className="gridStyle">
         <Grid data={data} isCarousel hasLine={false}/>
@@ -43,7 +44,8 @@ const TakeOut = (props)=>{
         <img src={centerBanner} className={styles.bannerMiddle} />
         <ShopList />
       </WingBlank> */}
-      
+      <SelectCity />
+
 
 
     </div>

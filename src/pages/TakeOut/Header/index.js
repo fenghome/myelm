@@ -4,8 +4,8 @@ import styles from './index.less';
 import locationIco from './img/location.svg';
 import downIco from './img/down.svg';
 import searchIco from './img/search.png';
-import SelectLocation from './SelectLocation';
 import QueueAnim from 'rc-queue-anim';
+
 
 class Header extends React.Component {
 
@@ -66,7 +66,7 @@ class Header extends React.Component {
 
     return (
       <div className={styles.header}>
-        <div className={styles.address} onClick={this.showSelectLoc}>
+        {/* <div className={styles.address} onClick={this.showSelectLoc}>
           <img src={locationIco} className={styles.locationIco} />
           <div className={styles.locationText}>{address}</div>
           <img src={downIco} className={styles.downIco} />
@@ -87,8 +87,8 @@ class Header extends React.Component {
           ]}
           >
           {this.state.showSelectLoc ? <SelectLocation key='1' onBackClick={this.hideSelectLoc}/> : null}
+        </QueueAnim> */}
 
-        </QueueAnim>
 
 
       </div>

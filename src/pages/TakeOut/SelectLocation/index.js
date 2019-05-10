@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.less';
-import Title from '../../../../components/Title';
+import Title from '../../../components/Title';
 import { Flex, WingBlank, WhiteSpace, InputItem } from 'antd-mobile';
 import { Icon } from 'antd';
 import LocIco from './img/locIco';
