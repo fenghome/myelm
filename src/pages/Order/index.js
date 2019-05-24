@@ -1,15 +1,11 @@
 import { Grid } from 'antd-mobile';
-const data = Array.from(new Array(9)).map((_val, i) => ({
-  icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
-  text: `name${i}`,
-}));
+import Filter from '../../components/Filter';
 
 
 const Order = (props) => {
   return (
     <div>
-      <Grid data={data} isCarousel hasLine={false}
-      />
+      <Filter />
     </div>
   )
 

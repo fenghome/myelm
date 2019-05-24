@@ -1,17 +1,19 @@
 export default {
-  namespace: 'selectCity',
+  namespace: 'takeOut',
   state: {
-    inputCity: '',
-    letter:'',
+    filterKey:null,
   },
   reducers: {
-    setInputCity(state, { payload: inputCity }) {
-      return { ...state, inputCity }
+    setFilterKey(state,{payload:filterKey}){
+      return { ...state,filterKey}
     },
+    // setInputCity(state, { payload: inputCity }) {
+    //   return { ...state, inputCity }
+    // },
 
-    setLetter(state,{ payload:letter}){
-      return { ...state, letter }
-    }
+    // setLetter(state,{ payload:letter}){
+    //   return { ...state, letter }
+    // }
   },
   effects: {
     //   *login(action, { call, put }) {

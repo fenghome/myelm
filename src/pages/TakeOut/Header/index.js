@@ -66,7 +66,7 @@ class Header extends React.Component {
 
     return (
       <div className={styles.header}>
-        {/* <div className={styles.address} onClick={this.showSelectLoc}>
+        <div className={styles.address} onClick={this.showSelectLoc}>
           <img src={locationIco} className={styles.locationIco} />
           <div className={styles.locationText}>{address}</div>
           <img src={downIco} className={styles.downIco} />
@@ -81,15 +81,13 @@ class Header extends React.Component {
         </div>
 
         {this.state.searchFloat && searchFloatCom}
-        <QueueAnim
+        {/* <QueueAnim
           animConfig={[
             { translateX: [0, 750] },
           ]}
           >
           {this.state.showSelectLoc ? <SelectLocation key='1' onBackClick={this.hideSelectLoc}/> : null}
         </QueueAnim> */}
-
-
 
       </div>
     )
